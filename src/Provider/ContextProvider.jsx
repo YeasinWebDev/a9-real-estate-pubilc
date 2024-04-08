@@ -7,8 +7,9 @@ function ContextProvider({ children }) {
     const [user, setUser] = useState(null)
     const [loading, setloading] = useState(true)
 
-    const logInByGoogle = () => {
+    console.log(user);
 
+    const logInByGoogle = () => {
         const provider = new GoogleAuthProvider();
         return signInWithPopup(auth, provider)
     }
