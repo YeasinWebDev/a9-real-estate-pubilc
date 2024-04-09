@@ -9,7 +9,7 @@ function Root() {
     <div>
       <Nav />
       <div className='w-full
-       h-screen'>
+       h-screen bg-white'>
         <Outlet />
       </div>
       <Footer />

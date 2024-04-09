@@ -34,13 +34,19 @@ export default function App() {
 
     const googleSignIn = () => {
         logInByGoogle()
-            .then(e => navigate(location.state || '/'))
+            .then(e => {
+                navigate(location.state || '/'),
+                    toast('signIn succesfull')
+            })
             .catch(e => toast(e.message))
     }
 
     const gitHubSignIn = () => {
         logInByGithub()
-            .then(e => navigate('/'))
+            .then(e => {
+                navigate(location.state || '/'),
+                    toast('signIn succesfull')
+            })
             .catch(e => toast(e.message))
     }
 
@@ -62,11 +68,11 @@ export default function App() {
                     <input
                         {...register("password", { required: true })}
                         className='text-black outline-none border-b-2 w-full  bg-transparent text-xl mb-5 pr-20'
-                        type={!see? "password" : 'text'}
+                        type={!see ? "password" : 'text'}
                         placeholder='Password'
                     />
                     <div>
-                        {see ?  <span className="cursor-pointer" onClick={() => setSee(!see)}><FaRegEyeSlash  size={20}/></span> : <span className="cursor-pointer" onClick={() => setSee(!see)}><FaRegEye size={20}/></span> }
+                        {see ? <span className="cursor-pointer" onClick={() => setSee(!see)}><FaRegEyeSlash size={20} /></span> : <span className="cursor-pointer" onClick={() => setSee(!see)}><FaRegEye size={20} /></span>}
                     </div>
 
                 </div>

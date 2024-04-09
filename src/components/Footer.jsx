@@ -3,8 +3,8 @@ import { Link } from 'react-router-dom'
 
 function Footer() {
   return (
-    <footer className="footer">
-      <div className='main grid xl:grid-cols-4 md:grid-cols-2 grid-cols-2 text-white xl:px-28 xl:py-20 p-10 gap-2  md:gap-0'>
+    <footer className="footer flex flex-col items-center justify-center">
+      <div className='main grid xl:grid-cols-4 md:grid-cols-2 grid-cols-2 text-white xl:px-28 xl:py-20 md:p-10 p-5 gap-2  md:gap-0'>
         <div className="footer-column">
           <h3 className='font-bold text-2xl mb-2'>About us</h3>
           <p className='w-[80%]'>Garden Services provides full & comprehensive services in irrigation, landscape, maintenance, and professional tree care.</p>

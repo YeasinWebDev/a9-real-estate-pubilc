@@ -40,7 +40,7 @@ function Nav() {
                     user ? (
                         <div className='w-10 h-10 rounded-full flex items-center gap-2 mr-28'>
                             {user?.photoURL ? (
-                                <img className='w-full h-full rounded-full' src={user?.photoURL || 'https://media.istockphoto.com/id/1495088043/vector/user-profile-icon-avatar-or-person-icon-profile-picture-portrait-symbol-default-portrait.jpg?s=612x612&w=0&k=20&c=dhV2p1JwmloBTOaGAtaA3AW1KSnjsdMt7-U_3EZElZ0='} data-tooltip-id="img"
+                                <img className='w-full h-full rounded-full object-cover' src={user?.photoURL || 'https://media.istockphoto.com/id/1495088043/vector/user-profile-icon-avatar-or-person-icon-profile-picture-portrait-symbol-default-portrait.jpg?s=612x612&w=0&k=20&c=dhV2p1JwmloBTOaGAtaA3AW1KSnjsdMt7-U_3EZElZ0='} data-tooltip-id="img"
                                     data-tooltip-content={user.displayName} />
 
                             ) : (

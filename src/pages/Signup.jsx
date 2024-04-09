@@ -17,7 +17,7 @@ function Signup() {
         reset,
         formState: { errors },
     } = useForm()
-    const { logInByGoogle, createUser, setUserData, logInByGithub, user } = useContext(AuthContext)
+    const { logInByGoogle, createUser, logInByGithub} = useContext(AuthContext)
 
     const onSubmit = (data) => {
         const { email, password } = data;
@@ -51,12 +51,18 @@ function Signup() {
 
     const googleSignIn = () => {
         logInByGoogle()
-            .then(e => navigate('/'))
+            .then(e => {
+                navigate('/'),
+                    toast('signUp succesfull')
+            })
             .catch(e => toast(e.message))
     }
     const gitHubSignIn = () => {
         logInByGithub()
-            .then(e => navigate('/'))
+            .then(e => {
+                navigate('/'),
+                    toast('signUp succesfull')
+            })
             .catch(e => toast(e.message))
     }
     return (
