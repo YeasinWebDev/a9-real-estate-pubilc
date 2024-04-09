@@ -1,4 +1,4 @@
-import React, { useRef, useState } from 'react';
+import React, { useEffect, useRef, useState } from 'react';
 // Import Swiper React components
 import { Swiper, SwiperSlide } from 'swiper/react';
 
@@ -11,9 +11,15 @@ import 'swiper/css/navigation';
 import { Autoplay, Pagination, Navigation } from 'swiper/modules';
 import { MdOutlineArrowForward } from "react-icons/md";
 
+import 'aos/dist/aos.css'; 
+import AOS from 'aos';
+
 export default function App() {
+    useEffect(() =>{
+        AOS.init({duration:1000,offset: 200,});
+    },[])
     return (
-        <div className=' w-full mt-10'>
+        <div data-aos="fade-up" data-aos-easing="ease-in-sine" className=' w-full mt-10'>
             <Swiper
                 spaceBetween={30}
                 centeredSlides={true}

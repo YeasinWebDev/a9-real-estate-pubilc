@@ -66,7 +66,7 @@ function Signup() {
             .catch(e => toast(e.message))
     }
     return (
-        <div className="flex flex-col justify-cente items-center  border-2 w-fit mx-auto px-10 py-10">
+        <div className="flex flex-col justify-cente items-center  border-2 w-fit mx-auto px-10 py-10 my-5 rounded-xl">
             <h2 className='text-4xl font-semibold mb-5 text-[#016022]'>SignUp</h2>
             <form onSubmit={handleSubmit(onSubmit)}>
                 <input

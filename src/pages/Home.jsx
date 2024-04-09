@@ -20,7 +20,7 @@ function Home() {
           {
             allData.map((item, index) => {
               return (
-                <Product key={index} data={item} />
+                <Product  key={index} data={item} />
               )
             })
           }
