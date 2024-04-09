@@ -1,54 +1,77 @@
-import { useContext, useState } from "react"
-import { useForm } from "react-hook-form"
-import { Link } from "react-router-dom"
-import { AuthContext } from "../Provider/ContextProvider"
+import React, { useContext, useState } from 'react'
+import { useForm } from 'react-hook-form'
+import { Link } from 'react-router-dom'
+import { AuthContext } from '../Provider/ContextProvider'
 import { toast } from 'react-toastify';
-import { useNavigate, useLocation } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
+import { updateProfile } from "firebase/auth";
 import { FaRegEye } from "react-icons/fa6";
 import { FaRegEyeSlash } from "react-icons/fa6";
 
-
-export default function App() {
-    const [see, setSee] = useState(false)
+function Signup() {
     const navigate = useNavigate()
-    const location = useLocation()
+    const [see, setSee] = useState(false)
     const {
         register,
         handleSubmit,
         reset,
         formState: { errors },
     } = useForm()
-
-    const { signIn, logInByGoogle, logInByGithub } = useContext(AuthContext)
-
+    const { logInByGoogle, createUser, setUserData, logInByGithub, user } = useContext(AuthContext)
 
     const onSubmit = (data) => {
-        signIn(data.email, data.password)
-            .then(e => {
-                navigate(location.state || '/'),
-                    toast('signIn succesfull')
+        const { email, password } = data;
+
+        if (password.length < 6) {
+            toast("Password must be at least 6 characters long.");
+            return;
+        }
+        if (!/[A-Z]/.test(password)) {
+            toast("Password must contain at least one uppercase letter.");
+            return;
+        }
+        if (!/[a-z]/.test(password)) {
+            toast("Password must contain at least one lowercase letter.");
+            return;
+        }
+        createUser(email, password)
+            .then((e) => {
+                updateProfile(e.user, {
+                    displayName: data.name,
+                    photoURL: data.photo
+                })
+                navigate('/');
+                toast("Signup successful")
             })
-            .catch(e => toast(e.message))
-        reset()
+            .catch(e => toast(e.message));
+
+        reset();
     }
+
 
     const googleSignIn = () => {
         logInByGoogle()
-            .then(e => navigate(location.state || '/'))
+            .then(e => navigate('/'))
             .catch(e => toast(e.message))
     }
-
     const gitHubSignIn = () => {
         logInByGithub()
             .then(e => navigate('/'))
             .catch(e => toast(e.message))
     }
-
-
     return (
         <div className="flex flex-col justify-cente items-center  border-2 w-fit mx-auto px-10 py-10">
-            <h2 className='text-4xl font-semibold mb-5 text-[#016022]'>Login</h2>
+            <h2 className='text-4xl font-semibold mb-5 text-[#016022]'>SignUp</h2>
             <form onSubmit={handleSubmit(onSubmit)}>
+                <input
+                    className='text-black outline-none border-b-2 w-full  bg-transparent text-xl mb-5 pr-20'
+                    {...register("name", { required: true })}
+                    type="name"
+                    placeholder='Your Name'
+                />
+                <br />
+                {errors.password && <span className="text-red-600">Name is required</span>}
+                <br />
                 <input
                     className='text-black outline-none border-b-2 w-full  bg-transparent text-xl mb-5 pr-20'
                     {...register("email", { required: true })}
@@ -58,35 +81,34 @@ export default function App() {
                 <br />
                 {errors.password && <span className="text-red-600">Email is required</span>}
                 <br />
+                <input
+                    className='text-black outline-none border-b-2 w-full  bg-transparent text-xl mb-5 pr-20'
+                    {...register("photo", { required: true })}
+                    type="photo"
+                    placeholder='Your Photo'
+                />
+                <br />
+                {errors.password && <span className="text-red-600">Photo is required</span>}
+                <br />
                 <div className="flex">
                     <input
                         {...register("password", { required: true })}
                         className='text-black outline-none border-b-2 w-full  bg-transparent text-xl mb-5 pr-20'
-                        type={!see? "password" : 'text'}
+                        type={!see ? "password" : 'text'}
                         placeholder='Password'
                     />
                     <div>
-                        {see ?  <span className="cursor-pointer" onClick={() => setSee(!see)}><FaRegEyeSlash  size={20}/></span> : <span className="cursor-pointer" onClick={() => setSee(!see)}><FaRegEye size={20}/></span> }
+                        {see ? <span className="cursor-pointer" onClick={() => setSee(!see)}><FaRegEyeSlash size={20} /></span> : <span className="cursor-pointer" onClick={() => setSee(!see)}><FaRegEye size={20} /></span>}
                     </div>
 
                 </div>
                 <br />
                 {errors.password && <span className="text-red-600">Password is required</span>}
-                <div className='flex gap-[69px] mt-10'>
-                    <label>
-                        <input
-                            type="checkbox"
-                            {...register("checkbox", { required: true })}
-                        />
-                        <span className="ml-2">Remember Me</span>
-                    </label>
-                    <h1 className='border-b-2 border-[#016022] text-[#016022]'><Link>Forgot Password</Link></h1>
-                </div>
-                {errors.checkbox && <span className="text-red-600">Please check the box</span>}
+
                 <button className='bg-[#016022] text-white w-full p-2 mt-10 rounded-xl'>
-                    Login
+                    SignUp
                 </button>
-                <p className='my-3'>Don't have an account ? <Link to={'/signup'} className='text-[#016022] font-bold'>Create an account</Link></p>
+                <p className='my-3'>Already have an account ? <Link to={'/signin'} className='text-[#016022] font-bold'>SignIn</Link></p>
                 <div className='text-xl w-full '>--------------------- or ----------------------</div>
                 <div className="flex items-center justify-center flex-col">
                     <h1 className='mb-3 text-xl'>Continue with</h1>
@@ -104,3 +126,5 @@ export default function App() {
         </div>
     )
 }
+
+export default Signup
