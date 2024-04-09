@@ -6,10 +6,9 @@ import Footer from './Footer'
 
 function Root() {
   return (
-    <div>
+    <div className='w-full h-full'>
       <Nav />
-      <div className='w-full
-       h-screen bg-white'>
+      <div className='w-full h-fit bg-white'>
         <Outlet />
       </div>
       <Footer />

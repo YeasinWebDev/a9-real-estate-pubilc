@@ -1,0 +1,130 @@
+[
+    {
+        "id": 1,
+        "estate_title": "Serenity Garden Retreat",
+        "segment_name": "Luxury Garden Estates",
+        "description": "Escape to a tranquil oasis surrounded by lush greenery and vibrant blooms. This exquisite garden retreat offers the ultimate in relaxation and natural beauty.",
+        "price": "$1,500,000",
+        "status": "on sale",
+        "image": "https://i.ibb.co/7p6fncx/product-1.jpg",
+        "area": "3000 sq ft",
+        "location": "Suburban Paradise",
+        "facilities": [
+            "Outdoor Living Area",
+            "Swimming Pool",
+            "Outdoor Kitchen"
+        ]
+    },
+    {
+        "id": 2,
+        "estate_title": "Cozy Cottage Garden",
+        "segment_name": "Charming Cottage Gardens",
+        "description": "Discover the charm of country living in this cozy cottage garden. Delight in quaint pathways, colorful flowerbeds, and the soothing ambiance of nature.",
+        "price": "$750,000",
+        "status": "on sale",
+        "image": "https://i.ibb.co/cbnvj6R/2.jpg",
+        "area": "1500 sq ft",
+        "location": "Rural Retreat",
+        "facilities": [
+            "Cozy Living Room",
+            "Garden Shed",
+            "Outdoor Dining Area"
+        ]
+    },
+    {
+        "id": 3,
+        "estate_title": "Urban Rooftop Garden",
+        "segment_name": "Modern Urban Gardens",
+        "description": "Elevate city living with a stunning rooftop garden retreat. Enjoy breathtaking skyline views, stylish outdoor living spaces, and a thriving urban oasis.",
+        "price": "$2,200/month",
+        "status": "on rent",
+        "image": "https://i.ibb.co/L1R7jHS/wooden-road-middle-forest.jpg",
+        "area": "800 sq ft",
+        "location": "Downtown Metropolis",
+        "facilities": [
+            "Rooftop Deck",
+            "City Views",
+            "Outdoor Lounge"
+        ]
+    },
+    {
+        "id": 4,
+        "estate_title": "Mediterranean Villa Garden",
+        "segment_name": "Mediterranean Inspired Gardens",
+        "description": "Indulge in the beauty of the Mediterranean with this luxurious villa garden. Immerse yourself in fragrant citrus trees, elegant fountains, and sun-kissed terraces.",
+        "price": "$3,000,000",
+        "status": "on sale",
+        "image": "https://i.ibb.co/FJGVVLR/18715.jpg",
+        "area": "5000 sq ft",
+        "location": "Coastal Haven",
+        "facilities": [
+            "Mediterranean Villa",
+            "Private Courtyard",
+            "Ocean Views"
+        ]
+    },
+    {
+        "id": 5,
+        "estate_title": "Japanese Zen Garden",
+        "segment_name": "Zen Inspired Gardens",
+        "description": "Find inner peace in a Japanese Zen garden. Experience the harmony of carefully placed rocks, tranquil water features, and meticulously raked sand.",
+        "price": "$1,800/month",
+        "status": "on rent",
+        "image": "https://i.ibb.co/qFgSRzj/5.jpg",
+        "area": "1200 sq ft",
+        "location": "Tranquil Zen Sanctuary",
+        "facilities": [
+            "Zen Garden",
+            "Koi Pond",
+            "Tea House"
+        ]
+    },
+    {
+        "id": 6,
+        "estate_title": "English Country Garden Estate",
+        "segment_name": "Classic English Gardens",
+        "description": "Step into the timeless beauty of an English country garden estate. Stroll through fragrant rose gardens, manicured lawns, and charming rustic pathways.",
+        "price": "$1,950,000",
+        "status": "on sale",
+        "image": "https://i.ibb.co/qdN3f7C/6.jpg",
+        "area": "4000 sq ft",
+        "location": "Idyllic Countryside",
+        "facilities": [
+            "English Cottage",
+            "Rose Garden",
+            "Orchard"
+        ]
+    },
+    {
+        "id": 7,
+        "estate_title": "Tropical Paradise Retreat",
+        "segment_name": "Tropical Oasis Gardens",
+        "description": "Escape to a tropical paradise retreat and bask in the beauty of lush foliage, exotic flowers, and sparkling water features. Your own slice of heaven awaits.",
+        "price": "$4,500/month",
+        "status": "on rent",
+        "image": "https://i.ibb.co/bv9bysp/7.jpg",
+        "area": "1800 sq ft",
+        "location": "Island Paradise",
+        "facilities": [
+            "Tropical Garden",
+            "Infinity Pool",
+            "Poolside Cabana"
+        ]
+    },
+    {
+        "id": 8,
+        "estate_title": "Desert Oasis Garden",
+        "segment_name": "Desert Inspired Gardens",
+        "description": "Discover serenity in the midst of the desert with a captivating oasis garden. Immerse yourself in the beauty of native plants, sandstone formations, and tranquil pools.",
+        "price": "$1,200,000",
+        "status": "on sale",
+        "image": "https://i.ibb.co/Ln2vM1n/8.webp",
+        "area": "2500 sq ft",
+        "location": "Desert Sanctuary",
+        "facilities": [
+            "Desert Oasis",
+            "Rock Garden",
+            "Sun Deck"
+        ]
+    }
+]
