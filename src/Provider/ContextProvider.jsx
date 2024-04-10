@@ -41,9 +41,7 @@ function ContextProvider({ children }) {
     }
 
     useEffect(() => {
-        console.log("Effect triggered");
         const unSubscribe = onAuthStateChanged(auth, currentUser => {
-            console.log("onAuthStateChanged triggered");
             if (currentUser) {
                 setUser(currentUser);
             } else {

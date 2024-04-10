@@ -7,13 +7,13 @@ import AOS from 'aos';
 
 function Nav() {
     const { user, LogOut, loading } = useContext(AuthContext)
-    console.log(user);
 
     useEffect(() => {
         AOS.init({ duration: 1000, offset: 200, });
     }, [])
 
     const logoutClick = () => {
+        <Navigator to='/'/>
         LogOut()
     }
     return (
@@ -26,7 +26,7 @@ function Nav() {
                     <ul tabIndex={0} className="menu menu-sm dropdown-content mt-3 z-[1] p-2 shadow  rounded-box w-52">
                         <NavLink to={'/'} className={({ isActive }) => isActive ? "bg-[#016022] p-4 rounded-xl text-white whitespace-nowrap" : "p-4 whitespace-nowrap"}>Home</NavLink>
                         <NavLink to={'/update'} className={({ isActive }) => isActive ? "bg-[#016022] p-4 rounded-xl text-white whitespace-nowrap" : "p-4 whitespace-nowrap"}>Update Profile</NavLink>
-                        <NavLink to={'/user'} className={({ isActive }) => isActive ? "bg-[#016022] p-4 rounded-xl text-white whitespace-nowrap" : "p-4 whitespace-nowrap"}>User Profile</NavLink>
+                        <NavLink to={'/user'} className={({ isActive }) => isActive ? "bg-[#016022] p-4 rounded-xl text-white whitespace-nowrap" : "p-4 whitespace-nowrap"}>Profile</NavLink>
                     </ul>
                 </div>
                 <div className="btn btn-ghost text-xl">
@@ -51,9 +51,6 @@ function Nav() {
                                 data-tooltip-content={user.displayName} />
                             <button onClick={logoutClick} className=" md:p-4 p-3 font-semibold text-white  rounded-xl bg-gradient-to-r from-[#2a6c40] to-[#26a550]">LogOut</button>
 
-                            <Tooltip
-                                id="img"
-                            />
                         </div>
                     )
                         :
@@ -63,6 +60,9 @@ function Nav() {
                             </Link>
                         </div>)
                 }
+                <Tooltip
+                    id="img"
+                />
             </div>
         </div>
     )

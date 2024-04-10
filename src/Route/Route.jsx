@@ -10,11 +10,13 @@ import Signup from "../pages/Signup";
 import PrivateRoute from "./PrivateRoute";
 import Home from "../pages/Home";
 import Details from "../pages/Details";
+import ErrorPage from "../pages/ErrorPage";
 
 const router = createBrowserRouter([
     {
         path: "/",
         element: <Root />,
+        errorElement:<ErrorPage />,
         children: [
             {
                 path: "/",

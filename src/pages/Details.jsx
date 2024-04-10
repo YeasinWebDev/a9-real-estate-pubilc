@@ -13,12 +13,9 @@ function Details() {
             .then(data => {
                 setdetails(data.find(e => e.id === +id))
             })
-    }, [id])
-
-    useEffect(() => {
+        window.scrollTo(0, 0);
         AOS.init({ duration: 500, offset: 200, });
-    }, [])
-    console.log(details);
+    }, [id])
 
     return (
         <div data-aos="fade-down" data-aos-anchor-placement="center-bottom" className='flex flex-col gap-5 items-center justify-center py-10 ' key={details.id}>
@@ -36,7 +33,7 @@ function Details() {
                 <p className='py-5 flex flex-wrap gap-3 items-center border-b-2 border-dashed'>
                     <span className='font-semibold text-xl mr-2 '> Facilities:</span> <br />
                     <span className='font-semibold flex flex-wrap gap-2'>{details?.facilities?.map(e => (
-                         <span className='text-sm mx-2 text-black border-2 border-green-600 p-2 rounded-xl'>{e}</span>
+                        <span className='text-sm mx-2 text-black border-2 border-green-600 p-2 rounded-xl'>{e}</span>
                     ))}</span>
                 </p>
                 <div className='flex gap-4 mt-5'>
