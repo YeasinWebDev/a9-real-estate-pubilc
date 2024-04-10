@@ -17,7 +17,7 @@ function Signup() {
         reset,
         formState: { errors },
     } = useForm()
-    const { logInByGoogle, createUser, logInByGithub} = useContext(AuthContext)
+    const { logInByGoogle, createUser, logInByGithub,setUser} = useContext(AuthContext)
 
     const onSubmit = (data) => {
         const { email, password } = data;
@@ -40,6 +40,7 @@ function Signup() {
                     displayName: data.name,
                     photoURL: data.photo
                 })
+                setUser(e.user)
                 navigate('/');
                 toast("Signup successful")
             })

@@ -1,11 +1,12 @@
 import React, { useEffect } from 'react'
-import 'aos/dist/aos.css'; 
+import 'aos/dist/aos.css';
 import AOS from 'aos';
+import { Link } from 'react-router-dom';
 
 function Product({ data }) {
-  useEffect(() =>{
-    AOS.init({duration:1000,offset: 200,});
-},[])
+  useEffect(() => {
+    AOS.init({ duration: 500, offset: 200, });
+  }, [])
 
   return (
     <div>
@@ -19,7 +20,9 @@ function Product({ data }) {
           <p className='font-semibold text-sm'>Status:  <span className='text-sm'>" {data.status} "</span></p>
           <p className='font-semibold text-sm'>Price:  <span className='text-sm'>" {data.price} "</span></p>
           <div className="card-actions border-t-2 border-dashed py-4">
-            <button className="btn border-2 bg-transparent border-[#016022] text-black hover:bg-[#093a1a] hover:text-white hover:bg-none">View Property</button>
+            <Link to={`/details/${data.id}`}>
+              <button className="btn border-2 bg-transparent border-[#016022] text-black hover:bg-[#093a1a] hover:text-white hover:bg-none">View Property</button>
+            </Link>
           </div>
         </div>
       </div>

@@ -2,15 +2,16 @@ import React, { useContext, useEffect } from 'react'
 import { Link, NavLink } from 'react-router-dom'
 import { AuthContext } from '../Provider/ContextProvider'
 import { Tooltip } from 'react-tooltip'
-import 'aos/dist/aos.css'; 
+import 'aos/dist/aos.css';
 import AOS from 'aos';
 
 function Nav() {
-    const { user, LogOut } = useContext(AuthContext)
+    const { user, LogOut, loading } = useContext(AuthContext)
+    console.log(user);
 
-    useEffect(() =>{
-        AOS.init({duration:1000,offset: 200,});
-    },[])
+    useEffect(() => {
+        AOS.init({ duration: 1000, offset: 200, });
+    }, [])
 
     const logoutClick = () => {
         LogOut()
@@ -46,13 +47,8 @@ function Nav() {
                 {
                     user ? (
                         <div className='w-10 h-10 rounded-full flex items-center gap-2 mr-28'>
-                            {user?.photoURL ? (
-                                <img className='w-full h-full rounded-full object-cover' src={user?.photoURL || 'https://media.istockphoto.com/id/1495088043/vector/user-profile-icon-avatar-or-person-icon-profile-picture-portrait-symbol-default-portrait.jpg?s=612x612&w=0&k=20&c=dhV2p1JwmloBTOaGAtaA3AW1KSnjsdMt7-U_3EZElZ0='} data-tooltip-id="img"
-                                    data-tooltip-content={user.displayName} />
-
-                            ) : (
-                                <img src='https://media.istockphoto.com/id/1495088043/vector/user-profile-icon-avatar-or-person-icon-profile-picture-portrait-symbol-default-portrait.jpg?s=612x612&w=0&k=20&c=dhV2p1JwmloBTOaGAtaA3AW1KSnjsdMt7-U_3EZElZ0=' />
-                            )}
+                            <img className='w-full h-full rounded-full object-cover' src={user.photoURL} data-tooltip-id="img"
+                                data-tooltip-content={user.displayName} />
                             <button onClick={logoutClick} className=" md:p-4 p-3 font-semibold text-white  rounded-xl bg-gradient-to-r from-[#2a6c40] to-[#26a550]">LogOut</button>
 
                             <Tooltip

@@ -7,9 +7,6 @@ function ContextProvider({ children }) {
     const [user, setUser] = useState(null)
     const [loading, setloading] = useState(true)
 
-    // console.log(user);
-    // console.log(userData);
-
     const logInByGoogle = () => {
         setloading(true)
         const provider = new GoogleAuthProvider();
@@ -34,7 +31,7 @@ function ContextProvider({ children }) {
 
     const LogOut = () => {
         setloading(true)
-        return signOut(auth)
+        signOut(auth)
             .then(() => {
                 setUser(null);
             })
@@ -44,15 +41,16 @@ function ContextProvider({ children }) {
     }
 
     useEffect(() => {
+        console.log("Effect triggered");
         const unSubscribe = onAuthStateChanged(auth, currentUser => {
+            console.log("onAuthStateChanged triggered");
             if (currentUser) {
-                setloading(false)
-                setUser(currentUser)
+                setUser(currentUser);
             } else {
-                setloading(false)
-                setUser(null)
+                setUser(null);
             }
-        })
+            setloading(false);
+        });
         return () => {
             unSubscribe()
         }
