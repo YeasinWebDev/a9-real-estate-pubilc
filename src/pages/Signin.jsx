@@ -6,6 +6,7 @@ import { toast } from 'react-toastify';
 import { useNavigate, useLocation } from "react-router-dom";
 import { FaRegEye } from "react-icons/fa6";
 import { FaRegEyeSlash } from "react-icons/fa6";
+import {Helmet} from "react-helmet";
 
 
 export default function App() {
@@ -53,6 +54,9 @@ export default function App() {
 
     return (
         <div className="flex flex-col justify-center items-center  border-2 w-fit mx-auto px-10 py-10 my-5 rounded-xl">
+            <Helmet>
+                <title>SignIn</title>
+            </Helmet>
             <h2 className='text-4xl font-semibold mb-5 text-[#016022]'>Login</h2>
             <form onSubmit={handleSubmit(onSubmit)}>
                 <input

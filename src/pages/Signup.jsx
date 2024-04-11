@@ -7,7 +7,7 @@ import { useNavigate } from "react-router-dom";
 import { updateProfile } from "firebase/auth";
 import { FaRegEye } from "react-icons/fa6";
 import { FaRegEyeSlash } from "react-icons/fa6";
-
+import {Helmet} from "react-helmet";
 function Signup() {
     const navigate = useNavigate()
     const [see, setSee] = useState(false)
@@ -17,9 +17,9 @@ function Signup() {
         reset,
         formState: { errors },
     } = useForm()
-    const { logInByGoogle, createUser, logInByGithub,setUser} = useContext(AuthContext)
+    const { logInByGoogle, createUser, logInByGithub, setUser, user } = useContext(AuthContext)
 
-    const onSubmit = (data) => {
+    const onSubmit = async (data) => {
         const { email, password } = data;
 
         if (password.length < 6) {
@@ -34,17 +34,15 @@ function Signup() {
             toast("Password must contain at least one lowercase letter.");
             return;
         }
-        createUser(email, password)
-            .then((e) => {
-                updateProfile(e.user, {
-                    displayName: data.name,
-                    photoURL: data.photo
-                })
-                setUser(e.user)
-                navigate('/');
-                toast("Signup successful")
-            })
-            .catch(e => toast(e.message));
+        try {
+            const userCredential = await createUser(email, password);
+            setUser(userCredential.user);
+            await updateProfile(userCredential.user, { displayName: data.name, photoURL: data.photo });
+            navigate('/');
+            toast('Signup successful');
+        } catch (error) {
+            toast(error.message);
+        }
 
         reset();
     }
@@ -68,6 +66,9 @@ function Signup() {
     }
     return (
         <div className="flex flex-col justify-cente items-center  border-2 w-fit mx-auto px-10 py-10 my-5 rounded-xl">
+            <Helmet>
+                <title>SignUp</title>
+            </Helmet>
             <h2 className='text-4xl font-semibold mb-5 text-[#016022]'>SignUp</h2>
             <form onSubmit={handleSubmit(onSubmit)}>
                 <input

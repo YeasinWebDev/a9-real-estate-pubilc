@@ -20,9 +20,9 @@ function ContextProvider({ children }) {
     }
 
     const createUser = (email, pass) => {
-        setloading(true)
-        return createUserWithEmailAndPassword(auth, email, pass)
-    }
+        setloading(true);
+        return  createUserWithEmailAndPassword(auth, email, pass);
+    };
 
     const signIn = (email, pass) => {
         setloading(true)
@@ -32,17 +32,12 @@ function ContextProvider({ children }) {
     const LogOut = () => {
         setloading(true)
         signOut(auth)
-            .then(() => {
-                setUser(null);
-            })
-            .catch(error => {
-                console.error('Error signing out:', error);
-            });
     }
 
     useEffect(() => {
         const unSubscribe = onAuthStateChanged(auth, currentUser => {
             if (currentUser) {
+                console.log('user found');
                 setUser(currentUser);
             } else {
                 setUser(null);
@@ -56,7 +51,7 @@ function ContextProvider({ children }) {
 
 
 
-    const authinfo = { user, setUser, createUser, signIn, LogOut, logInByGoogle, loading, logInByGithub }
+    const authinfo = { user, setUser, createUser, signIn, LogOut, logInByGoogle, loading, setloading, logInByGithub }
     return (
         <AuthContext.Provider value={authinfo}>
             {children}

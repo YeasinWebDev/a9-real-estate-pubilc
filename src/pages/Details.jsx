@@ -2,6 +2,7 @@ import React, { useEffect, useState } from 'react'
 import { useParams } from 'react-router-dom'
 import 'aos/dist/aos.css';
 import AOS from 'aos';
+import {Helmet} from "react-helmet";
 
 function Details() {
     const { id } = useParams()
@@ -19,6 +20,9 @@ function Details() {
 
     return (
         <div data-aos="fade-down" data-aos-anchor-placement="center-bottom" className='flex flex-col gap-5 items-center justify-center py-10 ' key={details.id}>
+            <Helmet>
+                <title>Product-Details</title>
+            </Helmet>
             <div className="img md:w-[70vh] px-2 md:px-0 rounded-xl flex items-center">
                 <img className='rounded-xl' src={details.image} alt="" />
             </div>

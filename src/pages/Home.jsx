@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react'
 import Hero from '../components/Hero'
 import Product from '../components/Product'
+import { Helmet } from "react-helmet";
 
 function Home() {
   const [allData, setAllData] = useState([])
@@ -13,6 +14,9 @@ function Home() {
   }, [])
   return (
     <div className='w-full  overflow-hidden'>
+      <Helmet>
+        <title>Home</title>
+      </Helmet>
       <Hero />
       <div className='mt-5 mb-20'>
         <h1 className='flex items-center justify-center text-4xl font-semibold'>Discover Your Dream Garden: Where Nature Meets Luxury</h1>
@@ -20,7 +24,7 @@ function Home() {
           {
             allData.map((item, index) => {
               return (
-                <Product  key={index} data={item} />
+                <Product key={index} data={item} />
               )
             })
           }

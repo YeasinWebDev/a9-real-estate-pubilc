@@ -13,6 +13,7 @@ import { MdOutlineArrowForward } from "react-icons/md";
 
 import 'aos/dist/aos.css'; 
 import AOS from 'aos';
+import { Link } from 'react-router-dom';
 
 export default function App() {
     useEffect(() =>{
@@ -41,10 +42,10 @@ export default function App() {
                         <p className='text-white lg:w-[30%] md:w-[50%] px-2 md:px-0 my-3 flex items-center justify-center text-center'>
                             we consistently aim to deliver the same reliable, prompt professional and friendly service synonymous
                         </p>
-                        <button className='md:px-8 md:py-5 p-4 bg-white text-black hover:bg-gradient-to-r from-[#259b2a] to-[#024105] hover:text-white rounded-lg flex gap-3 items-center text-xl group transition-all duration-300 mt-8'>
+                        <Link to={'/contact'}><button className='md:px-8 md:py-5 p-4 bg-white text-black hover:bg-gradient-to-r from-[#259b2a] to-[#024105] hover:text-white rounded-lg flex gap-3 items-center text-xl group transition-all duration-300 mt-8'>
                             Contact us
                             <div className='transition-transform transform-gpu group-hover:rotate-[-45deg]'><MdOutlineArrowForward size={25} /></div>
-                        </button>
+                        </button></Link>
                     </div>
                 </SwiperSlide>
                 <SwiperSlide style={{ backgroundImage: 'url(../../assets/hero-2.jpg)', width: '100%', height: '100%', backgroundPosition: "center", backgroundRepeat: "no-repeat", backgroundSize: "cover" }}>
@@ -54,10 +55,10 @@ export default function App() {
                         <p className='text-white lg:w-[30%] md:w-[50%] px-2 md:px-0 my-3 flex items-center justify-center text-center'>
                             Passion for Full-Service Landscape Management has been our driving force since 1999, and our commitment to customer satisfaction remains our top priority.
                         </p>
-                        <button className='md:px-8 md:py-5 p-4 bg-white text-black hover:bg-gradient-to-r from-[#259b2a] to-[#024105] hover:text-white rounded-lg flex gap-3 items-center text-xl group transition-all duration-300 mt-8'>
+                        <Link to={'/contact'}><button className='md:px-8 md:py-5 p-4 bg-white text-black hover:bg-gradient-to-r from-[#259b2a] to-[#024105] hover:text-white rounded-lg flex gap-3 items-center text-xl group transition-all duration-300 mt-8'>
                             Contact us
                             <div className='transition-transform transform-gpu group-hover:rotate-[-45deg]'><MdOutlineArrowForward size={25} /></div>
-                        </button>
+                        </button></Link>
                     </div>
                 </SwiperSlide>
                 <SwiperSlide style={{ backgroundImage: 'url(../../assets/hero-3.jpg)', width: '100%', height: '100%', backgroundPosition: "center", backgroundRepeat: "no-repeat", backgroundSize: "cover" }}>
@@ -67,10 +68,10 @@ export default function App() {
                         <p className='text-white lg:w-[30%] md:w-[50%] px-2 md:px-0 my-3 flex items-center justify-center text-center'>
                             Our unwavering dedication to excellence ensures top-tier service in landscaping, maintenance, design, and installation, guaranteeing your complete satisfaction with every project.
                         </p>
-                        <button className='md:px-8 md:py-5 p-4 bg-white text-black hover:bg-gradient-to-r from-[#259b2a] to-[#024105] hover:text-white rounded-lg flex gap-3 items-center text-xl group transition-all duration-300 mt-8'>
+                        <Link to={'/contact'}><button className='md:px-8 md:py-5 p-4 bg-white text-black hover:bg-gradient-to-r from-[#259b2a] to-[#024105] hover:text-white rounded-lg flex gap-3 items-center text-xl group transition-all duration-300 mt-8'>
                             Contact us
                             <div className='transition-transform transform-gpu group-hover:rotate-[-45deg]'><MdOutlineArrowForward size={25} /></div>
-                        </button>
+                        </button></Link>
                     </div>
                 </SwiperSlide>
             </Swiper>

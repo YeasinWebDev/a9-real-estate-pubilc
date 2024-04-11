@@ -11,6 +11,7 @@ import PrivateRoute from "./PrivateRoute";
 import Home from "../pages/Home";
 import Details from "../pages/Details";
 import ErrorPage from "../pages/ErrorPage";
+import ContactUs from "../pages/ContactUs";
 
 const router = createBrowserRouter([
     {
@@ -41,6 +42,10 @@ const router = createBrowserRouter([
             {
                 path:'/details/:id',
                 element: <PrivateRoute><Details/></PrivateRoute>
+            },
+            {
+                path:"/contact",
+                element:<ContactUs></ContactUs>
             }
         ]
     },
