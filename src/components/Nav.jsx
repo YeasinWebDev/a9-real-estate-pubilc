@@ -25,6 +25,7 @@ function Nav() {
                     </div>
                     <ul tabIndex={0} className="menu menu-sm dropdown-content mt-3 z-[1] p-2 shadow  rounded-box w-52">
                         <NavLink to={'/'} className={({ isActive }) => isActive ? "bg-[#016022] p-4 rounded-xl text-white whitespace-nowrap" : "p-4 whitespace-nowrap"}>Home</NavLink>
+                        <NavLink to={'/calendar'} className={({ isActive }) => isActive ? "bg-[#016022] p-4 rounded-xl text-white whitespace-nowrap" : "p-4 whitespace-nowrap"}>Calendar</NavLink>
                         <NavLink to={'/user'} className={({ isActive }) => isActive ? "bg-[#016022] p-4 rounded-xl text-white whitespace-nowrap" : "p-4 whitespace-nowrap"}>Profile</NavLink>
                         <NavLink to={'/contact'} className={({ isActive }) => isActive ? "bg-[#016022] p-4 rounded-xl text-white whitespace-nowrap" : "p-4 whitespace-nowrap"}>Contact </NavLink>
                     </ul>
@@ -39,6 +40,7 @@ function Nav() {
             <div className="navbar-center hidden lg:flex">
                 <ul className="menu menu-horizontal px-1 font-semibold text-lg">
                     <NavLink to={'/'} className={({ isActive }) => isActive ? "bg-[#016022] p-4 rounded-xl text-white whitespace-nowrap" : "p-4 whitespace-nowrap"}>Home</NavLink>
+                    <NavLink to={'/calendar'} className={({ isActive }) => isActive ? "bg-[#016022] p-4 rounded-xl text-white whitespace-nowrap" : "p-4 whitespace-nowrap"}> Calendar</NavLink>
                     <NavLink to={'/user'} className={({ isActive }) => isActive ? "bg-[#016022] p-4 rounded-xl text-white whitespace-nowrap" : "p-4 whitespace-nowrap"}> Profile</NavLink>
                     <NavLink to={'/contact'} className={({ isActive }) => isActive ? "bg-[#016022] p-4 rounded-xl text-white whitespace-nowrap" : "p-4 whitespace-nowrap"}>Contact </NavLink>
                 </ul>

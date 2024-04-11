@@ -12,6 +12,7 @@ import Home from "../pages/Home";
 import Details from "../pages/Details";
 import ErrorPage from "../pages/ErrorPage";
 import ContactUs from "../pages/ContactUs";
+import Calendar from "../pages/Calendar";
 
 const router = createBrowserRouter([
     {
@@ -46,6 +47,10 @@ const router = createBrowserRouter([
             {
                 path:"/contact",
                 element:<ContactUs></ContactUs>
+            },
+            {
+                path:"/calendar",
+                element:<Calendar/>
             }
         ]
     },

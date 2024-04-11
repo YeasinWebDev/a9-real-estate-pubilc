@@ -1,0 +1,122 @@
+[
+    {
+        "id": 1,
+        "name": "January",
+        "img": "./cal/jan.png",
+        "keyPoints": [
+            "Take a look at your seeds. Sort them by the month they need to be started or planted.",
+            "Thrift stores and online communities are great places to look for free or inexpensive gardening tools and containers to grow plants in. Supports for climbing plants can be made from many recycled items, like clothes-drying racks and even small ladders!",
+            "Plan a garden with neighbors and friends: share the work, seeds and tools, then share the bounty."
+        ]
+    },
+    {
+        "id": 2,
+        "name": "February",
+        "img": "./cal/feb.png",
+        "keyPoints": [
+            "Prune deciduous trees and shrubs before new growth begins.",
+            "Start seeds indoors for cool-season vegetables like lettuce, spinach, and kale.",
+            "Prepare garden beds by adding compost and organic matter to improve soil structure and fertility."
+        ]
+    },
+    {
+        "id": 3,
+        "name": "March",
+        "img": "./cal/mar.png",
+        "keyPoints": [
+            "Sow seeds outdoors for hardy vegetables like peas, carrots, and radishes.",
+            "Divide and transplant perennial flowers and ornamental grasses.",
+            "Monitor for pests and diseases as temperatures rise. Take preventive measures to protect plants."
+        ]
+    },
+    {
+        "id": 4,
+        "name": "April",
+        "img": "./cal/apr.png",
+        "keyPoints": [
+            "Plant cool-season annuals and perennials, such as pansies, snapdragons, and dianthus.",
+            "Set out transplants for warm-season vegetables like tomatoes, peppers, and squash.",
+            "Mulch garden beds to conserve moisture, suppress weeds, and regulate soil temperature."
+        ]
+    },
+    {
+        "id": 5,
+        "name": "May",
+        "img": "./cal/may.png",
+        "keyPoints": [
+            "Direct sow seeds for warm-season vegetables and herbs, including beans, cucumbers, and basil.",
+            "Deadhead flowers regularly to promote continuous blooming.",
+            "Water deeply and consistently as temperatures rise, especially for newly planted or container-grown plants."
+        ]
+    },
+    {
+        "id": 6,
+        "name": "June",
+        "img": "./cal/jun.png",
+        "keyPoints": [
+            "Harvest early-season crops like lettuce, spinach, and strawberries.",
+            "Provide support for tall or sprawling plants, such as tomatoes, cucumbers, and pole beans.",
+            "Monitor soil moisture and water as needed, especially during hot and dry periods."
+        ]
+    },
+    {
+        "id": 7,
+        "name": "July",
+        "img": "./cal/july.png",
+        "keyPoints": [
+            "Mulch garden beds to conserve moisture and suppress weeds.",
+            "Deadhead flowers and remove spent foliage to encourage new growth and flowering.",
+            "Monitor for pests and diseases. Take prompt action to prevent damage to plants."
+        ]
+    },
+    {
+        "id": 8,
+        "name": "August",
+        "img": "./cal/aug.png",
+        "keyPoints": [
+            "Harvest and preserve crops like tomatoes, peppers, and beans as they ripen.",
+            "Start planning for fall gardening by sowing seeds for cool-season crops.",
+            "Water deeply and infrequently to encourage deep root growth and drought tolerance."
+        ]
+    },
+    {
+        "id": 9,
+        "name": "September",
+        "img": "./cal/sep.png",
+        "keyPoints": [
+            "Plant cool-season vegetables and flowers for fall and winter harvest.",
+            "Divide and transplant perennials while the soil is still warm and moist.",
+            "Clean up garden beds by removing spent foliage and debris to reduce overwintering pests and diseases."
+        ]
+    },
+    {
+        "id": 10,
+        "name": "October",
+        "img": "./cal/oct.png",
+        "keyPoints": [
+            "Harvest root crops like carrots, potatoes, and beets before the ground freezes.",
+            "Protect tender plants from frost with row covers, cloches, or cold frames.",
+            "Plant spring-flowering bulbs like tulips, daffodils, and crocuses for early color."
+        ]
+    },
+    {
+        "id": 11,
+        "name": "November",
+        "img": "./cal/nov.png",
+        "keyPoints": [
+            "Prepare garden beds for winter by adding mulch and compost.",
+            "Clean and store garden tools and equipment to prevent damage from freezing temperatures.",
+            "Continue harvesting cool-season crops like kale, cabbage, and Brussels sprouts."
+        ]
+    },
+    {
+        "id": 12,
+        "name": "December",
+        "img": "./cal/dec.png",
+        "keyPoints": [
+            "Reflect on the past gardening season and make notes for improvements or changes for next year.",
+            "Order seeds and supplies for the upcoming gardening season.",
+            "Plan and design new garden beds or landscape projects for the spring."
+        ]
+    }
+]
