@@ -7,6 +7,7 @@ function ContextProvider({ children }) {
     const [user, setUser] = useState(null)
     const [loading, setloading] = useState(true)
 
+    console.log(user);
     const logInByGoogle = () => {
         setloading(true)
         const provider = new GoogleAuthProvider();
@@ -20,7 +21,7 @@ function ContextProvider({ children }) {
     }
 
     const createUser = (email, pass) => {
-        setloading(true);
+        // setloading(true);
         return  createUserWithEmailAndPassword(auth, email, pass);
     };
 

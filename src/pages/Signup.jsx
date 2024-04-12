@@ -7,7 +7,7 @@ import { useNavigate } from "react-router-dom";
 import { updateProfile } from "firebase/auth";
 import { FaRegEye } from "react-icons/fa6";
 import { FaRegEyeSlash } from "react-icons/fa6";
-import {Helmet} from "react-helmet";
+import { Helmet } from "react-helmet";
 function Signup() {
     const navigate = useNavigate()
     const [see, setSee] = useState(false)
@@ -19,7 +19,7 @@ function Signup() {
     } = useForm()
     const { logInByGoogle, createUser, logInByGithub, setUser, user } = useContext(AuthContext)
 
-    const onSubmit = async (data) => {
+    const onSubmit = (data) => {
         const { email, password } = data;
 
         if (password.length < 6) {
@@ -34,15 +34,18 @@ function Signup() {
             toast("Password must contain at least one lowercase letter.");
             return;
         }
-        try {
-            const userCredential = await createUser(email, password);
-            setUser(userCredential.user);
-            await updateProfile(userCredential.user, { displayName: data.name, photoURL: data.photo });
-            navigate('/');
-            toast('Signup successful');
-        } catch (error) {
-            toast(error.message);
-        }
+        createUser(email, password)
+            .then((e) => {
+                updateProfile(e.user, { displayName: data.name, photoURL: data.photo });
+                setUser(prevUser => ({
+                    ...prevUser,
+                    displayName: data.name,
+                    photoURL: data.photo
+                }));
+                navigate('/');
+                toast("Signup successful");
+            })
+            .catch(e => toast(e.message));
 
         reset();
     }

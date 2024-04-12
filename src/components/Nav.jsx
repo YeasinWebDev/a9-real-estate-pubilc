@@ -49,9 +49,7 @@ function Nav() {
                 {
                     user ? (
                         <div className='w-10 h-10 rounded-full flex items-center gap-2 mr-28'>
-
-                            <img className='w-full h-full rounded-full object-cover' src={user.photoURL} data-tooltip-id="img" data-tooltip-content={user.displayName} />
-
+                            <img className='w-full h-full rounded-full object-cover' src={user?.photoURL} data-tooltip-id="img" data-tooltip-content={user?.displayName} />
                             <button onClick={logoutClick} className="md:p-4 p-3 font-semibold text-white rounded-xl bg-gradient-to-r from-[#2a6c40] to-[#26a550]">LogOut</button>
                         </div>
                     )

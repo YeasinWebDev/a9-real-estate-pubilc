@@ -12,7 +12,6 @@ function UserPage() {
   const [name, setName] = useState('');
   const [photoURL, setPhotoURL] = useState('');
   const [show, setShow] = useState(false);
-  console.log(user);
 
   const emailVerifiedStatus = user.emailVerified ? "Yes" : "No";
 
@@ -24,10 +23,12 @@ function UserPage() {
       displayName: name,
       photoURL: photoURL
     })
-      .then(() => {
-        setUser(user);
-        setShow(false);
-      })
+    setUser(prevUser => ({
+      ...prevUser,
+      displayName: name,
+      photoURL: photoURL
+    }));
+    setShow(false);
   };
 
   useEffect(() => {

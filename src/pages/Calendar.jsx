@@ -40,11 +40,11 @@ function Calendar() {
       </div>
       {selectedItem && (
         <div className="fixed top-0 left-0 w-full h-full flex items-center justify-center bg-black bg-opacity-50 z-50">
-          <div className="bg-white p-8 rounded-xl">
+          <div className="bg-white p-8 rounded-xl md:w-[60%] w-full">
             <h2 className="text-2xl font-semibold mb-4">{selectedItem.name}</h2>
-            <div>
+            <div className=''>
               {selectedItem?.keyPoints.map((e,i) =>(
-                <p className='mb-2 font-semibold text-xl flex-wrap'>{i + 1}. {e}</p>
+                <p className=' mb-2 font-semibold text-xl flex-wrap'>{i + 1}. {e}</p>
               ))}
             </div>
             <button onClick={handleCloseDetails} className="mt-4 px-4 py-2 bg-gray-300 rounded-md hover:bg-gray-400">Close</button>
