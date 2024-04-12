@@ -6,8 +6,6 @@ function ContextProvider({ children }) {
 
     const [user, setUser] = useState(null)
     const [loading, setloading] = useState(true)
-
-    console.log(user);
     const logInByGoogle = () => {
         setloading(true)
         const provider = new GoogleAuthProvider();

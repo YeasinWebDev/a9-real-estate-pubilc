@@ -3,14 +3,14 @@ import 'aos/dist/aos.css';
 import AOS from 'aos';
 import { Link } from 'react-router-dom';
 
-function Product({ data }) {
+function Product({ data, i }) {
   useEffect(() => {
     AOS.init({ duration: 500, offset: 200, });
   }, [])
 
   return (
     <div>
-      <div data-aos="fade-up" data-aos-anchor-placement="center-bottom" className="card w-96 shadow-xl">
+      <div data-aos="fade-up" data-aos-delay={i * 100} data-aos-anchor-placement="center-bottom" className="card w-96 shadow-xl">
         <figure className="">
           <img src={data.image} />
         </figure>
