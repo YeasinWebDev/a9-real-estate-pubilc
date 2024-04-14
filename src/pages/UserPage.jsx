@@ -76,7 +76,7 @@ function UserPage() {
       }
 
       <div className='flex flex-col  items-center py-10 text-black gap-2'>
-        <div className='w-30 h-30 rounded-full'>
+        <div className='w-30 rounded-full'>
           <img className='w-full h-full object-cover rounded-full' src={user.photoURL} alt="photo" />
         </div>
         <div className='flex flex-col gap-3 p-3'>

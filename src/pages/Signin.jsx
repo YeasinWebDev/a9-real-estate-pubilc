@@ -27,7 +27,7 @@ export default function App() {
         signIn(data.email, data.password)
             .then(e => {
                 navigate(location.state || '/'),
-                    toast('signIn succesfull')
+                    toast('SignIn Succesfull')
             })
             .catch(e => toast(e.message))
         reset()
@@ -37,7 +37,7 @@ export default function App() {
         logInByGoogle()
             .then(e => {
                 navigate(location.state || '/'),
-                    toast('signIn succesfull')
+                    toast('SignIn Succesfull')
             })
             .catch(e => toast(e.message))
     }
@@ -46,7 +46,7 @@ export default function App() {
         logInByGithub()
             .then(e => {
                 navigate(location.state || '/'),
-                    toast('signIn succesfull')
+                    toast('SignIn Succesfull')
             })
             .catch(e => toast(e.message))
     }

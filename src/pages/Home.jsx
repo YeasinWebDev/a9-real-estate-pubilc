@@ -19,7 +19,7 @@ function Home() {
       </Helmet>
       <Hero />
       <div className='mt-5 mb-20'>
-        <h1 className='flex items-center justify-center text-4xl font-semibold'>Discover Your Dream Garden: Where Nature Meets Luxury</h1>
+        <h1 className='flex items-center justify-center text-center text-2xl md:text-4xl font-semibold'>Discover Your Dream Garden: Where Nature Meets Luxury</h1>
         <div className='w-full h-fit flex flex-wrap mt-10 gap-8 items-center justify-center'>
           {
             allData.map((item, index) => {
