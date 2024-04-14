@@ -32,7 +32,7 @@ function Nav() {
                 </div>
                 <div className="btn btn-ghost text-xl">
                     <div className='md:w-14 w-12 flex  items-center gap-3'>
-                        <img src="../../public/logo.jpg" alt="" />
+                        <img src="./logo.jpg" alt="" />
                         <span className='md:text-4xl text-2xl font-semibold'>Env<span className='text-[#016022]'>ato </span></span>
                     </div>
                 </div>
