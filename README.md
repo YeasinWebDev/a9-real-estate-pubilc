@@ -1,13 +1,14 @@
-#Envato Gardening Site
+Envato Gardening Site
 
+Live : https://a9-envoto.web.app/
 
-##Overview
+Overview
 
 Envato Gardening Site sells gardens and gardening-related products. The site provides an intuitive interface for users to explore various gardens, plants, and gardening tools. Additionally, users can manage their profiles and access a garden calendar to stay informed about gardening activities throughout the year.
 
 
 
-##Features
+Features
 
    1. Responsive Design: Ensures optimal viewing across devices.
    2. Product Catalog: Offers diverse gardens, plants, and supplies with detailed descriptions.
@@ -18,7 +19,7 @@ Envato Gardening Site sells gardens and gardening-related products. The site pro
 
 
 
-##Technologies Used
+Technologies Used
 
    1. Vite: A modern build tool for fast development and optimized production builds.
    2. React A JavaScript library for building user interfaces.
@@ -32,7 +33,7 @@ Envato Gardening Site sells gardens and gardening-related products. The site pro
 
       
 
-##Getting Started
+Getting Started
 
 To run the Envato Gardening Site locally on your machine, follow these steps:
 
