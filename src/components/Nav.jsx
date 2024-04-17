@@ -31,9 +31,9 @@ function Nav() {
                     </ul>
                 </div>
                 <div className="btn btn-ghost text-xl">
-                    <div className='md:w-14 w-12 flex  items-center gap-3'>
+                    <div className='md:w-14 w-6 flex  items-center gap-3'>
                         <img src="./logo.jpg" alt="" />
-                        <span className='md:text-4xl text-2xl font-semibold'>Env<span className='text-[#016022]'>ato </span></span>
+                        <span className='md:text-4xl text-xl font-semibold'>Env<span className='text-[#016022]'>ato </span></span>
                     </div>
                 </div>
             </div>
@@ -48,7 +48,7 @@ function Nav() {
             <div className="navbar-end ">
                 {
                     user ? (
-                        <div className='w-10 h-10 rounded-full flex items-center gap-2 mr-28'>
+                        <div className='w-10 h-10  rounded-full flex items-center gap-2 md:mr-28 mr-20'>
                             <img className='w-full h-full rounded-full object-cover' src={user?.photoURL} data-tooltip-id="img" data-tooltip-content={user?.displayName} />
                             <button onClick={logoutClick} className="md:p-4 p-3 font-semibold text-white rounded-xl bg-gradient-to-r from-[#2a6c40] to-[#26a550]">LogOut</button>
                         </div>
